@@ -21,7 +21,7 @@ export default function CompareBar({
   return (
     <aside
       aria-label="Comparison dock"
-      className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 w-[95%] max-w-2xl bg-navy text-white rounded-2xl shadow-2xl border border-navy-light px-4 py-3 sm:px-5 sm:py-3.5"
+      className="fixed bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 z-40 w-[calc(100%-1.5rem)] sm:w-[95%] max-w-2xl bg-navy text-white rounded-2xl shadow-2xl border border-navy-light px-3.5 py-3 sm:px-5 sm:py-3.5"
     >
       <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
         <div className="flex items-center gap-3 w-full sm:w-auto">

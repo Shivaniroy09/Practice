@@ -107,9 +107,17 @@ function CompareContent() {
           )}
         </div>
 
+        {/* Mobile Swipe Hint */}
+        {selectedSchemes.length > 0 && (
+          <div className="md:hidden flex items-center justify-between text-xs text-slate-500 mb-2 px-1">
+            <span>Scroll horizontally to see all columns</span>
+            <span className="font-semibold text-primary">← Swipe →</span>
+          </div>
+        )}
+
         {/* Comparison Table */}
         {selectedSchemes.length > 0 ? (
-          <div className="bg-white rounded-2xl border border-slate-200 shadow-xs overflow-x-auto">
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-xs overflow-x-auto touch-pan-x">
             <table className="w-full min-w-[700px] border-collapse text-left text-sm">
               <thead>
                 <tr className="border-b border-slate-200 bg-slate-50">

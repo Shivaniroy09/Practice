@@ -155,7 +155,7 @@ export default function SchemeCard({
       </div>
 
       {/* Card Footer Actions */}
-      <div className="px-5 sm:px-6 py-3.5 bg-slate-50/90 border-t border-slate-100 flex items-center justify-between gap-2 mt-2">
+      <div className="px-4 sm:px-6 py-3.5 bg-slate-50/90 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2.5 mt-2">
         <div className="flex items-center gap-2">
           {onCompareToggle && (
             <label className="flex items-center gap-1.5 text-xs text-slate-600 cursor-pointer select-none">
@@ -163,14 +163,14 @@ export default function SchemeCard({
                 type="checkbox"
                 checked={isComparing}
                 onChange={() => onCompareToggle(scheme)}
-                className="w-3.5 h-3.5 rounded border-slate-300 text-primary focus:ring-primary"
+                className="w-4 h-4 rounded border-slate-300 text-primary focus:ring-primary"
               />
-              <span>Compare</span>
+              <span className="font-medium">Compare</span>
             </label>
           )}
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 ml-auto sm:ml-0">
           <Link
             href={`/scheme/${scheme.id}`}
             className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:text-primary-dark px-2.5 py-1.5 rounded transition-colors"
@@ -184,7 +184,7 @@ export default function SchemeCard({
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleApplyClick}
-            className="inline-flex items-center gap-1.5 text-xs font-semibold bg-navy hover:bg-navy-light text-white px-3 py-1.5 rounded-lg shadow-xs transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold bg-navy hover:bg-navy-light text-white px-3 py-1.5 rounded-lg shadow-xs transition-colors shrink-0"
             title="Opens official government portal"
           >
             <span>Official Portal</span>

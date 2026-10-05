@@ -9,11 +9,11 @@ export default function DisclaimerBanner() {
 
   return (
     <div className="bg-light-blue border-b border-light-blue-dark" role="status">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5">
-        <div className="flex items-center gap-2 justify-center text-sm text-navy">
-          <Info className="w-4 h-4 shrink-0 text-primary" aria-hidden="true" />
-          <span className="font-medium">{t("site.independentPlatform")}</span>
-          <span className="hidden sm:inline text-text-secondary">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-2.5">
+        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 justify-center text-center text-xs sm:text-sm text-navy leading-normal">
+          <Info className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 text-primary" aria-hidden="true" />
+          <span className="font-semibold">{t("site.independentPlatform")}</span>
+          <span className="text-text-secondary text-xs sm:text-sm">
             — {t("site.disclaimer")}
           </span>
         </div>

@@ -30,7 +30,7 @@ export default function ExternalLinkModal({
       aria-modal="true"
       aria-labelledby="modal-title"
     >
-      <div className="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl border border-slate-200">
+      <div className="bg-white rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto p-5 sm:p-6 shadow-2xl border border-slate-200">
         <div className="flex items-start justify-between mb-4">
           <div className="w-10 h-10 rounded-full bg-light-blue text-primary flex items-center justify-center shrink-0">
             <ShieldAlert className="w-5 h-5" />

@@ -84,12 +84,12 @@ export default function SearchBar({ large = false, className = "" }: SearchBarPr
       <form onSubmit={handleSearch} role="search" aria-label="Search schemes">
         <div
           className={`relative flex items-center bg-white border border-border rounded-xl shadow-sm hover:shadow-md transition-shadow ${
-            large ? "py-1 px-1" : ""
+            large ? "py-0.5 sm:py-1 px-1" : ""
           }`}
         >
           <Search
-            className={`absolute left-4 text-text-secondary ${
-              large ? "w-5 h-5" : "w-4 h-4"
+            className={`absolute left-3.5 sm:left-4 text-text-secondary ${
+              large ? "w-4 h-4 sm:w-5 sm:h-5" : "w-4 h-4"
             }`}
             aria-hidden="true"
           />
@@ -101,16 +101,16 @@ export default function SearchBar({ large = false, className = "" }: SearchBarPr
             placeholder={t("hero.search.placeholder")}
             className={`w-full bg-transparent border-0 outline-none text-text placeholder:text-text-secondary ${
               large
-                ? "pl-12 pr-28 py-4 text-base"
-                : "pl-10 pr-20 py-3 text-sm"
+                ? "pl-10 sm:pl-12 pr-24 sm:pr-28 py-3.5 sm:py-4 text-sm sm:text-base"
+                : "pl-9 sm:pl-10 pr-20 sm:pr-24 py-2.5 sm:py-3 text-xs sm:text-sm"
             }`}
             aria-label="Search for schemes"
           />
-          <div className="absolute right-2 flex items-center gap-1">
+          <div className="absolute right-1.5 sm:right-2 flex items-center gap-1">
             <button
               type="button"
               onClick={startVoiceSearch}
-              className={`p-2 rounded-lg transition-colors ${
+              className={`p-2 rounded-lg transition-colors flex items-center justify-center min-w-[36px] min-h-[36px] ${
                 voiceStatus === "listening"
                   ? "text-error bg-red-50"
                   : "text-text-secondary hover:text-primary hover:bg-light-blue"
@@ -130,8 +130,10 @@ export default function SearchBar({ large = false, className = "" }: SearchBarPr
             </button>
             <button
               type="submit"
-              className={`bg-primary hover:bg-primary-dark text-white font-medium rounded-lg transition-colors ${
-                large ? "px-5 py-2.5 text-sm" : "px-4 py-2 text-xs"
+              className={`bg-primary hover:bg-primary-dark text-white font-medium rounded-lg transition-colors shrink-0 ${
+                large
+                  ? "px-3.5 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm"
+                  : "px-3 sm:px-4 py-1.5 sm:py-2 text-xs"
               }`}
             >
               {t("nav.findSchemes").split(" ")[0]}

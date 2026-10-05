@@ -394,6 +394,20 @@ function ResultsContent() {
               <Info className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
               <span>Filters run locally on your device for immediate, privacy-safe discovery.</span>
             </div>
+
+            {/* Mobile Close / Apply Button */}
+            <div className="lg:hidden pt-3 border-t border-slate-100">
+              <button
+                type="button"
+                onClick={() => {
+                  setMobileFilterOpen(false);
+                  window.scrollTo({ top: 120, behavior: "smooth" });
+                }}
+                className="w-full py-2.5 px-4 bg-navy hover:bg-navy-light text-white font-semibold text-xs rounded-xl shadow-xs transition-colors"
+              >
+                View {resultsWithMatch.length} Schemes
+              </button>
+            </div>
           </aside>
 
           {/* Right Main Content */}

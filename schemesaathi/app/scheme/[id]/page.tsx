@@ -179,36 +179,38 @@ export default function SchemeDetailPage({
           </p>
 
           {/* Action Row */}
-          <div className="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-slate-100 print:hidden">
-            <div className="flex flex-wrap items-center gap-2">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-6 border-t border-slate-100 print:hidden">
+            <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto">
               <button
                 onClick={() => setModalOpen(true)}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-navy hover:bg-navy-light text-white font-semibold text-sm shadow-sm transition-colors"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-navy hover:bg-navy-light text-white font-semibold text-sm shadow-sm transition-colors"
               >
                 <span>Apply on Official Portal</span>
                 <ExternalLink className="w-4 h-4" />
               </button>
 
-              <button
-                onClick={handlePrint}
-                className="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-50 font-medium text-xs transition-colors"
-              >
-                <Printer className="w-4 h-4" />
-                <span>Print Checklist</span>
-              </button>
+              <div className="flex items-center gap-2 w-full sm:w-auto">
+                <button
+                  onClick={handlePrint}
+                  className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-50 font-medium text-xs transition-colors"
+                >
+                  <Printer className="w-4 h-4" />
+                  <span>Print Checklist</span>
+                </button>
 
-              <button
-                onClick={handleShare}
-                className="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-50 font-medium text-xs transition-colors"
-              >
-                <Share2 className="w-4 h-4" />
-                <span>{copied ? "Link Copied!" : "Share Scheme"}</span>
-              </button>
+                <button
+                  onClick={handleShare}
+                  className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-50 font-medium text-xs transition-colors"
+                >
+                  <Share2 className="w-4 h-4" />
+                  <span>{copied ? "Link Copied!" : "Share"}</span>
+                </button>
+              </div>
             </div>
 
             <button
               onClick={() => setReportOpen(true)}
-              className="inline-flex items-center gap-1 text-xs text-slate-500 hover:text-warning transition-colors"
+              className="inline-flex items-center justify-center sm:justify-start gap-1 text-xs text-slate-500 hover:text-warning py-1 transition-colors"
             >
               <Flag className="w-3.5 h-3.5" />
               <span>Report Inaccurate Information</span>

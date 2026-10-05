@@ -39,7 +39,7 @@ export default function ReportIssueModal({
       aria-modal="true"
       aria-labelledby="report-modal-title"
     >
-      <div className="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl border border-slate-200">
+      <div className="bg-white rounded-2xl max-w-md w-full max-h-[90vh] overflow-y-auto p-5 sm:p-6 shadow-2xl border border-slate-200">
         <div className="flex items-start justify-between mb-4">
           <div className="w-10 h-10 rounded-full bg-amber-50 text-warning flex items-center justify-center">
             <Flag className="w-5 h-5" />
