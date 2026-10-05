@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SchemeSaathi — Indian Government Benefits Discovery Platform
 
-## Getting Started
+An independent third-party civic-technology platform designed to help Indian citizens discover Central and State Government schemes they may potentially be eligible for — with **zero document collection**, transparent criteria scoring, and direct links to official government portals.
 
-First, run the development server:
+---
+
+## 🌟 Key Features
+
+- **Privacy-First Civic Architecture**: Zero collection of Aadhaar, PAN, bank account numbers, OTPs, or uploaded certificates.
+- **Client-Side Matching Engine**: Instant eligibility calculation based on occupation, location, age, education, and income bracket directly in the browser.
+- **Direct Official Portal Routing**: Connects citizens directly to genuine `.gov.in` and `.nic.in` departmental portals with departure safety confirmation.
+- **Bilingual Interface**: Seamless instant toggle between English and हिन्दी (Hindi).
+- **Interactive Document Checklist**: Prepare and track required paperwork with printable checklists.
+- **Side-by-Side Scheme Comparison**: Compare up to 4 Central and State schemes across benefits, guidelines, and application workflows.
+- **36 States & UTs Directory**: Browse specialized state welfare initiatives alongside nationwide programs.
+- **Fully Responsive**: Optimized for smartphones, tablets, laptops, and ultra-wide desktop monitors.
+
+---
+
+## 🚀 Getting Started
+
+First, install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build for production:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 👩‍💻 Developed & Designed by
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Shivani**  
+*Creator & Developer of SchemeSaathi*
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **LinkedIn**: [https://www.linkedin.com/in/shivani2302/](https://www.linkedin.com/in/shivani2302/)
+- **GitHub**: [https://github.com/Shivaniroy09](https://github.com/Shivaniroy09)
+- **Instagram**: [https://www.instagram.com/shivaniii.jpeg/](https://www.instagram.com/shivaniii.jpeg/)
+- **Email**: [shivaniroy2309@gmail.com](mailto:shivaniroy2309@gmail.com)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📜 Legal Disclaimer
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+SchemeSaathi is an **independent third-party civic platform** and is **NOT** affiliated with, authorized, or operated by the Government of India or any State Government. SchemeSaathi does not process government applications, disburse benefits, or determine official beneficiary approvals. All applications are submitted directly on official government websites.
+
+---
+
+© 2026 SchemeSaathi. Designed & Developed by Shivani. All rights reserved.

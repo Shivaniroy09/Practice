@@ -115,6 +115,56 @@ export default function AboutPage() {
           </div>
         </div>
 
+        {/* Developer & Creator Section */}
+        <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-xs mb-12">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+            <div>
+              <div className="text-xs font-bold uppercase tracking-wider text-primary mb-1">
+                Platform Architecture & Design
+              </div>
+              <h2 className="text-xl font-bold text-navy">
+                Designed & Developed by Shivani
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-xl leading-relaxed">
+                SchemeSaathi was conceptualized, designed, and developed by Shivani as an open, privacy-centric civic-tech solution to empower citizens across India in discovering their rightful benefits.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-2.5">
+              <a
+                href="https://www.linkedin.com/in/shivani2302/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3 py-1.5 rounded-lg bg-blue-50 text-primary hover:bg-primary hover:text-white border border-blue-200 text-xs font-semibold transition-colors"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/Shivaniroy09"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 hover:bg-slate-800 hover:text-white border border-slate-300 text-xs font-semibold transition-colors"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://www.instagram.com/shivaniii.jpeg/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3 py-1.5 rounded-lg bg-pink-50 text-pink-700 hover:bg-pink-600 hover:text-white border border-pink-200 text-xs font-semibold transition-colors"
+              >
+                Instagram
+              </a>
+              <a
+                href="mailto:shivaniroy2309@gmail.com"
+                className="px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 hover:bg-emerald-700 hover:text-white border border-emerald-200 text-xs font-semibold transition-colors"
+              >
+                Email
+              </a>
+            </div>
+          </div>
+        </div>
+
         {/* CTA */}
         <div className="text-center py-6">
           <Link
