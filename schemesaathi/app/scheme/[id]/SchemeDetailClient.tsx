@@ -18,7 +18,6 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { schemes } from "@/data/schemes";
-import ExternalLinkModal from "@/components/ExternalLinkModal";
 import ReportIssueModal from "@/components/ReportIssueModal";
 import SchemeCard from "@/components/SchemeCard";
 import { useLanguage } from "@/lib/LanguageContext";
@@ -27,7 +26,6 @@ export default function SchemeDetailClient({ id }: { id: string }) {
   const scheme = schemes.find((s) => s.id === id);
 
   const { lang } = useLanguage();
-  const [modalOpen, setModalOpen] = useState(false);
   const [reportOpen, setReportOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const [checkedDocs, setCheckedDocs] = useState<Record<number, boolean>>({});
@@ -172,13 +170,15 @@ export default function SchemeDetailClient({ id }: { id: string }) {
           {/* Action Row */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-6 border-t border-slate-100 print:hidden">
             <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto">
-              <button
-                onClick={() => setModalOpen(true)}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-navy hover:bg-navy-light text-white font-semibold text-sm shadow-sm transition-colors"
+              <a
+                href={scheme.applicationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-navy hover:bg-navy-light text-white font-semibold text-sm shadow-sm transition-colors cursor-pointer"
               >
                 <span>Apply on Official Portal</span>
                 <ExternalLink className="w-4 h-4" />
-              </button>
+              </a>
 
               <div className="flex items-center gap-2 w-full sm:w-auto">
                 <button
@@ -285,13 +285,15 @@ export default function SchemeDetailClient({ id }: { id: string }) {
                 <span className="text-xs text-slate-500">
                   Ready to proceed?
                 </span>
-                <button
-                  onClick={() => setModalOpen(true)}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-primary-dark"
+                <a
+                  href={scheme.applicationUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-primary-dark cursor-pointer"
                 >
                   <span>Go to official government application portal</span>
                   <ExternalLink className="w-3.5 h-3.5" />
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -348,13 +350,15 @@ export default function SchemeDetailClient({ id }: { id: string }) {
                 <div className="text-xs text-slate-500 mb-3 break-all font-mono">
                   {scheme.sourceName}
                 </div>
-                <button
-                  onClick={() => setModalOpen(true)}
-                  className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-navy hover:bg-navy-light text-white font-semibold text-xs transition-colors"
+                <a
+                  href={scheme.applicationUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-navy hover:bg-navy-light text-white font-semibold text-xs transition-colors cursor-pointer text-center"
                 >
                   <span>Open Official Portal</span>
                   <ExternalLink className="w-3.5 h-3.5" />
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -375,13 +379,6 @@ export default function SchemeDetailClient({ id }: { id: string }) {
         )}
       </div>
 
-      {/* Official Government Portal Warning Modal */}
-      <ExternalLinkModal
-        isOpen={modalOpen}
-        onClose={() => setModalOpen(false)}
-        targetUrl={scheme.applicationUrl}
-        schemeName={scheme.name}
-      />
 
       {/* Report Issue Modal */}
       <ReportIssueModal

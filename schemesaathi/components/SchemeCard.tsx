@@ -26,7 +26,6 @@ interface SchemeCardProps {
 export default function SchemeCard({
   scheme,
   matchResult,
-  onSelectOfficialUrl,
   onCompareToggle,
   isComparing = false,
 }: SchemeCardProps) {
@@ -40,13 +39,6 @@ export default function SchemeCard({
 
   const benefits =
     lang === "hi" && scheme.benefitsHi ? scheme.benefitsHi : scheme.benefits;
-
-  const handleApplyClick = (e: React.MouseEvent) => {
-    if (onSelectOfficialUrl) {
-      e.preventDefault();
-      onSelectOfficialUrl(scheme.applicationUrl, scheme.name);
-    }
-  };
 
   return (
     <article className="bg-white rounded-xl border border-slate-200 hover:border-slate-300 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between overflow-hidden group">
@@ -181,7 +173,6 @@ export default function SchemeCard({
             href={scheme.applicationUrl}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={handleApplyClick}
             className="inline-flex items-center gap-1.5 text-xs font-semibold bg-navy hover:bg-navy-light text-white px-3 py-1.5 rounded-lg shadow-xs transition-colors shrink-0"
             title="Opens official government portal"
           >

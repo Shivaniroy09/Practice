@@ -18,11 +18,6 @@ export default function ExternalLinkModal({
 }: ExternalLinkModalProps) {
   if (!isOpen) return null;
 
-  const handleProceed = () => {
-    window.open(targetUrl, "_blank", "noopener,noreferrer");
-    onClose();
-  };
-
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-navy/60 backdrop-blur-xs animate-in fade-in duration-150"
@@ -70,7 +65,15 @@ export default function ExternalLinkModal({
         <div className="text-xs text-slate-500 mb-5 break-all">
           <span className="font-semibold text-slate-700">Official Destination URL: </span>
           <br />
-          <span className="font-mono text-primary">{targetUrl}</span>
+          <a
+            href={targetUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-primary hover:underline inline-flex items-center gap-1 mt-0.5"
+          >
+            <span>{targetUrl}</span>
+            <ExternalLink className="w-3 h-3 shrink-0" />
+          </a>
         </div>
 
         <div className="flex flex-col-reverse sm:flex-row items-center justify-end gap-3 pt-3 border-t border-slate-100">
@@ -81,14 +84,16 @@ export default function ExternalLinkModal({
           >
             Stay on SchemeSaathi
           </button>
-          <button
-            onClick={handleProceed}
-            type="button"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-navy hover:bg-navy-light text-white font-semibold text-sm shadow-sm transition-colors"
+          <a
+            href={targetUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={onClose}
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-navy hover:bg-navy-light text-white font-semibold text-sm shadow-sm transition-colors text-center"
           >
             <span>Proceed to Official Website</span>
             <ExternalLink className="w-4 h-4" />
-          </button>
+          </a>
         </div>
       </div>
     </div>
