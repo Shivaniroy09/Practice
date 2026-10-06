@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Users, Mail, Heart, ExternalLink } from "lucide-react";
+import { Users, Mail, Heart } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 
 // Clean inline SVGs for Brand Icons

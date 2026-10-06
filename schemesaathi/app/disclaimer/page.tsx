@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ShieldAlert, ChevronRight, AlertTriangle, FileWarning, CheckCircle } from "lucide-react";
+import { ShieldAlert, ChevronRight, AlertTriangle } from "lucide-react";
 
 export default function DisclaimerPage() {
   return (

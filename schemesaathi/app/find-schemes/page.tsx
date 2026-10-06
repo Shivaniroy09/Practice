@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ShieldCheck, HelpCircle, ChevronRight, Lock } from "lucide-react";
+import { HelpCircle, ChevronRight, Lock } from "lucide-react";
 import EligibilityWizard from "@/components/EligibilityWizard";
 
 export default function FindSchemesPage() {

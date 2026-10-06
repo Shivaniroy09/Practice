@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { ChevronRight, Building, ShieldCheck, Filter } from "lucide-react";
+import { ChevronRight, Building } from "lucide-react";
 import { schemes } from "@/data/schemes";
 import SchemeCard from "@/components/SchemeCard";
 import ExternalLinkModal from "@/components/ExternalLinkModal";

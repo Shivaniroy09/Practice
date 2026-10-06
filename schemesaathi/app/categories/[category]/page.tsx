@@ -1,20 +1,44 @@
-"use client";
-
-import React, { use } from "react";
+import React from "react";
+import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronRight, ArrowLeft } from "lucide-react";
 import { schemes } from "@/data/schemes";
 import { categories } from "@/data/categories";
 import SchemeCard from "@/components/SchemeCard";
-import { Category } from "@/types";
 
-export default function CategorySchemesPage({
+export function generateStaticParams() {
+  const allCategories = new Set<string>();
+  categories.forEach((c) => allCategories.add(c.id));
+  schemes.forEach((s) => s.categories.forEach((c) => allCategories.add(c)));
+  return Array.from(allCategories).map((category) => ({
+    category,
+  }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ category: string }>;
+}): Promise<Metadata> {
+  const { category } = await params;
+  const decodedCategory = decodeURIComponent(category);
+  const categoryInfo = categories.find(
+    (c) => c.id.toLowerCase() === decodedCategory.toLowerCase()
+  );
+  const categoryName = categoryInfo ? categoryInfo.label : decodedCategory;
+  return {
+    title: `${categoryName} Schemes — SchemeSaathi`,
+    description: `Browse all verified Central & State government schemes under ${categoryName}.`,
+  };
+}
+
+export default async function CategorySchemesPage({
   params,
 }: {
   params: Promise<{ category: string }>;
 }) {
-  const { category } = use(params);
+  const { category } = await params;
   const decodedCategory = decodeURIComponent(category);
 
   const categoryInfo = categories.find(

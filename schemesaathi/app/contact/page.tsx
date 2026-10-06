@@ -3,12 +3,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import {
-  Flag,
   ChevronRight,
   Send,
   CheckCircle2,
-  AlertCircle,
-  HelpCircle,
   MessageSquare,
   ShieldAlert,
 } from "lucide-react";

@@ -4,17 +4,11 @@ import React, { useState } from "react";
 import Link from "next/link";
 import {
   ShieldCheck,
-  Search,
   ArrowRight,
   Sparkles,
   FileCheck,
   ExternalLink,
   Users,
-  Building2,
-  CheckCircle2,
-  HelpCircle,
-  Award,
-  Globe2,
   ChevronRight,
   TrendingUp,
 } from "lucide-react";
@@ -24,11 +18,9 @@ import SchemeCard from "@/components/SchemeCard";
 import ExternalLinkModal from "@/components/ExternalLinkModal";
 import { categories } from "@/data/categories";
 import { schemes } from "@/data/schemes";
-import { ALL_STATES_AND_UTS, Scheme } from "@/types";
-import { useLanguage } from "@/lib/LanguageContext";
+import { ALL_STATES_AND_UTS } from "@/types";
 
 export default function HomePage() {
-  const { t, lang } = useLanguage();
   const [modalData, setModalData] = useState<{
     isOpen: boolean;
     url: string;

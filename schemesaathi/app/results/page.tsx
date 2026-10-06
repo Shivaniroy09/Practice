@@ -11,7 +11,6 @@ import {
   RotateCcw,
   Sparkles,
   Info,
-  Scale,
   X,
 } from "lucide-react";
 import { schemes } from "@/data/schemes";

@@ -7,12 +7,8 @@ import {
   Scale,
   ChevronRight,
   X,
-  Plus,
   ExternalLink,
   CheckCircle2,
-  Building2,
-  Layers,
-  FileText,
 } from "lucide-react";
 import { schemes } from "@/data/schemes";
 import { Scheme } from "@/types";

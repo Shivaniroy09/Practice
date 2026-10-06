@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:zip": "next build && cd out && zip -rq ../schemesaathi-netlify.zip .",
     "start": "next start",
     "lint": "eslint"
   },

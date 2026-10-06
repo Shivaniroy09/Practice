@@ -8,10 +8,8 @@ import {
   Building2,
   Calendar,
   ArrowRight,
-  Layers,
   FileText,
   Gift,
-  HelpCircle,
 } from "lucide-react";
 import { Scheme, MatchResult } from "@/types";
 import { useLanguage } from "@/lib/LanguageContext";

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { ChevronRight, MapPin, Search } from "lucide-react";
 import { schemes } from "@/data/schemes";
-import { ALL_STATES_AND_UTS, INDIAN_STATES, UNION_TERRITORIES } from "@/types";
+import { ALL_STATES_AND_UTS } from "@/types";
 import SchemeCard from "@/components/SchemeCard";
 import ExternalLinkModal from "@/components/ExternalLinkModal";
 

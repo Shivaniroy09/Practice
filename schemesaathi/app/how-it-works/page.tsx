@@ -4,16 +4,9 @@ import React from "react";
 import Link from "next/link";
 import {
   ShieldCheck,
-  Search,
-  ExternalLink,
   ChevronRight,
   Sparkles,
-  FileText,
   Lock,
-  Building2,
-  CheckCircle2,
-  AlertCircle,
-  HelpCircle,
   ArrowRight,
 } from "lucide-react";
 

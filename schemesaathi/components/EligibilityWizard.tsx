@@ -8,12 +8,6 @@ import {
   ArrowLeft,
   CheckCircle2,
   Sparkles,
-  HelpCircle,
-  MapPin,
-  Briefcase,
-  User,
-  Wallet,
-  Building,
   RotateCcw,
 } from "lucide-react";
 import {
@@ -26,7 +20,6 @@ import {
   AreaType,
   ALL_STATES_AND_UTS,
 } from "@/types";
-import { useLanguage } from "@/lib/LanguageContext";
 
 const OCCUPATION_OPTIONS: { id: Occupation; label: string; desc: string }[] = [
   { id: "Farmer", label: "Farmer / Agriculture", desc: "Cultivator, tenant farmer, or agri-allied worker" },
@@ -79,7 +72,6 @@ const EDUCATION_OPTIONS: EducationLevel[] = [
 
 export default function EligibilityWizard() {
   const router = useRouter();
-  const { t } = useLanguage();
 
   const [step, setStep] = useState(1);
   const totalSteps = 4;

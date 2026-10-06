@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Flag, X, CheckCircle, AlertTriangle } from "lucide-react";
+import { Flag, X, CheckCircle } from "lucide-react";
 
 interface ReportIssueModalProps {
   isOpen: boolean;
@@ -13,7 +13,6 @@ interface ReportIssueModalProps {
 export default function ReportIssueModal({
   isOpen,
   onClose,
-  schemeId,
   schemeName,
 }: ReportIssueModalProps) {
   const [issueType, setIssueType] = useState("outdated_info");
