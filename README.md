@@ -146,8 +146,8 @@ sequenceDiagram
 
 ### 1. Clone & Install
 ```bash
-git clone https://github.com/Shivaniroy09/schemesaathi.git
-cd schemesaathi
+git clone https://github.com/Shivaniroy09/SchemeSaathi.git
+cd SchemeSaathi/schemesaathi
 npm install
 ```
 
