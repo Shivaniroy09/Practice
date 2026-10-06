@@ -1,14 +1,16 @@
 # SchemeSaathi — Indian Government Benefits Discovery Platform
 
+[![Live Website](https://img.shields.io/badge/Live_Website-sathischeme.netlify.app-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://sathischeme.netlify.app/)
 [![Next.js](https://img.shields.io/badge/Next.js-16.3-black?style=flat&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.2-blue?style=flat&logo=react)](https://react.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38bdf8?style=flat&logo=tailwindcss)](https://tailwindcss.com/)
-[![Netlify](https://img.shields.io/badge/Deploy-Netlify-00C7B7?style=flat&logo=netlify)](https://sathischeme.netlify.app)
-[![PWA Ready](https://img.shields.io/badge/PWA-Installable-purple?style=flat&logo=pwa)](https://sathischeme.netlify.app)
+[![PWA Ready](https://img.shields.io/badge/PWA-Installable-purple?style=flat&logo=pwa)](https://sathischeme.netlify.app/)
+
+> ### 🌐 Live Application
+> **Official Live Website:** **[https://sathischeme.netlify.app/](https://sathischeme.netlify.app/)**  
+> *Fully responsive civic platform with PWA mobile installation & direct verified government portal routing.*
 
 An independent, third-party civic-technology platform designed to help Indian citizens discover Central and State Government schemes they may potentially be eligible for — with **zero document collection**, transparent criteria scoring, and direct links to official government portals.
-
-🌐 **Live Deployment:** [https://sathischeme.netlify.app](https://sathischeme.netlify.app)
 
 ---
 
